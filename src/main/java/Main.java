@@ -15,9 +15,17 @@ public class Main {
         list.add(20);
         list.add(7);
 
-        IntegerProblems numP = new IntegerProblems(list);
+        int[] arr = {1,2,3,4,5};
+
+        IntegerListProblems numP = new IntegerListProblems(list);
+        IntegerArrayProblems numP2 = new IntegerArrayProblems(arr);
 
         numP.getPrimeNumbers();
+        numP.getMedian();
 
+        numP2.getPrimeNumbers();
+        numP2.bubleSort();
+        numP2.printArray();
+        numP2.getMedian();
     }
 }
