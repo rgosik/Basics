@@ -21,11 +21,13 @@ public class Main {
         IntegerArrayProblems numP2 = new IntegerArrayProblems(arr);
 
         numP.getPrimeNumbers();
-        numP.getMedian();
+        System.out.println(numP.getMedian());
+
+        System.out.println();
 
         numP2.getPrimeNumbers();
         numP2.bubleSort();
         numP2.printArray();
-        numP2.getMedian();
+        System.out.println(numP2.getMedian());
     }
 }

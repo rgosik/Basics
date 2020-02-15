@@ -28,7 +28,7 @@ public class IntegerArrayProblems {
         }
     }
 
-    public void getMedian() {
+    public double getMedian() {
         double median;
         bubleSort();
         
@@ -38,7 +38,7 @@ public class IntegerArrayProblems {
             median = arr[arr.length/2];
         }
 
-        System.out.println(median);
+        return median;
     }
 
     public void getPrimeNumbers() {
