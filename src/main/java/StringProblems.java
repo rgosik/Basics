@@ -42,17 +42,28 @@ public class StringProblems {
 
             str.equalsIgnoreCase(String anotherString)
 
-            str.startsWith(String prefix, int startIndex) -return True if String starts with "prefix", from the "startIndex" index
+            str.startsWith(String prefix, int startIndex) - return True if String starts with "prefix", from the "startIndex" index
                           (String prefix)
 
-                          
+            str.endsWith(String suffix)
 
+            str.contains(CharSequence s) - returns True if "str" contains "s"
+
+            str.compareTo(String anotherStr) - returns 0 if "str" equals to "anotherStr",
+                                               more than 0 if lexicographically, "str" is greater than "anotherStr",
+                                               if is lesser, returns less tan 0 (negative)
+
+            str.comapreToIgnoreCase(String anotherStr)
+
+            str.getBytes() - converts "str" to an array of bytes
          */
     private String str;
 
     public StringProblems(String str){
         this.str = str;
     }
+
+
 
 
 
