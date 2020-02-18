@@ -17,10 +17,13 @@ public class Main {
 
         int[] arr = {1,2,3,4,5};
 
+        String str = "geabc";
+
         IntegerListProblems numP = new IntegerListProblems(list);
         IntegerArrayProblems numP2 = new IntegerArrayProblems(arr);
+        StringProblems str1 = new StringProblems(str);
 
-        /*numP.getPrimeNumbers();
+        numP.getPrimeNumbers();
         System.out.println(numP.getMedian());
 
         System.out.println();
@@ -28,19 +31,9 @@ public class Main {
         numP2.getPrimeNumbers();
         numP2.bubleSort();
         numP2.printArray();
-        System.out.println(numP2.getMedian());*/
+        System.out.println(numP2.getMedian());
 
-        String str1 = "String method tutorial";
-        String str2 = "compareTo method example";
-        String str3 = "String method tutorial";
+        System.out.println(str1.task1());
 
-        int var1 = str1.compareTo( str2 );
-        System.out.println("str1 & str2 comparison: "+var1);
-
-        int var2 = str1.compareTo( str3 );
-        System.out.println("str1 & str3 comparison: "+var2);
-
-        int var3 = str2.compareTo("compareTo method exam");
-        System.out.println("str2 & string argument comparison: "+var3);
     }
 }

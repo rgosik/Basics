@@ -56,10 +56,33 @@ public class StringProblems {
             str.comapreToIgnoreCase(String anotherStr)
 
             str.getBytes() - converts "str" to an array of bytes
+
+            str.concat(CharSequence s)
          */
     private String str;
 
     public StringProblems(String str){
         this.str = str;
     }
+
+    // program to read a string and return the string without the first two characters.
+    // Except keep the first char if it is 'g' and keep the second char if it is 'h'
+
+    public String task1(){
+
+        if(str.charAt(0) == 'g'){
+            if(str.charAt(1) == 'h'){
+                return str;
+            } else {
+                return str.substring(0,1).concat(str.substring(2));
+            }
+        } else {
+            if(str.charAt(1) == 'h'){
+                return str.substring(1);
+            } else {
+                return str.substring(2);
+            }
+        }
+    }
+
 }
