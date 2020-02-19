@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class StringProblems {
     /*
             str.length()
@@ -59,16 +63,13 @@ public class StringProblems {
 
             str.concat(CharSequence s)
          */
-    private String str;
 
-    public StringProblems(String str){
-        this.str = str;
+    public StringProblems(){
     }
 
-    // program to read a string and return the string without the first two characters.
+    // reads a string and return the string without the first two characters.
     // Except keep the first char if it is 'g' and keep the second char if it is 'h'
-
-    public String task1(){
+    public String task1(String str){
 
         if(str.charAt(0) == 'g'){
             if(str.charAt(1) == 'h'){
@@ -83,6 +84,15 @@ public class StringProblems {
                 return str.substring(2);
             }
         }
+    }
+
+    // reads a string and seperates it, by "-" into an array of Strings and deletes all the white spaces
+    public List<String> task2(String str){
+        List<String> strArr = new ArrayList<>();
+
+        String newStr = str.replaceAll("\\s+", "");
+        strArr = Arrays.asList(newStr.split("-"));
+        return strArr;
     }
 
 }

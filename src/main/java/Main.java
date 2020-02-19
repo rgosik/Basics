@@ -18,10 +18,11 @@ public class Main {
         int[] arr = {1,2,3,4,5};
 
         String str = "geabc";
+        String str2 = "  123  -  323- 423-32  11-86     - 555 ";
 
         IntegerListProblems numP = new IntegerListProblems(list);
         IntegerArrayProblems numP2 = new IntegerArrayProblems(arr);
-        StringProblems str1 = new StringProblems(str);
+        StringProblems strProblems = new StringProblems();
 
         numP.getPrimeNumbers();
         System.out.println(numP.getMedian());
@@ -33,7 +34,8 @@ public class Main {
         numP2.printArray();
         System.out.println(numP2.getMedian());
 
-        System.out.println(str1.task1());
+        System.out.println(strProblems.task1(str));
+        System.out.println(strProblems.task2(str2));
 
     }
 }
