@@ -64,21 +64,21 @@ public class StringProblems {
             str.concat(CharSequence s)
          */
 
-    public StringProblems(){
+    public StringProblems() {
     }
 
     // reads a string and return the string without the first two characters.
     // Except keep the first char if it is 'g' and keep the second char if it is 'h'
-    public String task1(String str){
+    public String task1(String str) {
 
         if(str.charAt(0) == 'g'){
-            if(str.charAt(1) == 'h'){
+            if(str.charAt(1) == 'h') {
                 return str;
             } else {
                 return str.substring(0,1).concat(str.substring(2));
             }
         } else {
-            if(str.charAt(1) == 'h'){
+            if(str.charAt(1) == 'h') {
                 return str.substring(1);
             } else {
                 return str.substring(2);
@@ -87,7 +87,7 @@ public class StringProblems {
     }
 
     // reads a string and seperates it, by "-" into an array of Strings and deletes all the white spaces
-    public List<String> task2(String str){
+    public List<String> task2(String str) {
         List<String> strArr = new ArrayList<>();
 
         String newStr = str.replaceAll("\\s+", "");

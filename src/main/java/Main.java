@@ -20,19 +20,21 @@ public class Main {
         String str = "geabc";
         String str2 = "  123  -  323- 423-32  11-86     - 555 ";
 
-        IntegerListProblems numP = new IntegerListProblems(list);
-        IntegerArrayProblems numP2 = new IntegerArrayProblems(arr);
+        //IntegerListProblems numP = new IntegerListProblems(list);
+        //IntegerArrayProblems numP2 = new IntegerArrayProblems(arr);
         StringProblems strProblems = new StringProblems();
 
+/*
         numP.getPrimeNumbers();
         System.out.println(numP.getMedian());
+*/
 
         System.out.println();
 
-        numP2.getPrimeNumbers();
+/*        numP2.getPrimeNumbers();
         numP2.bubleSort();
         numP2.printArray();
-        System.out.println(numP2.getMedian());
+        System.out.println(numP2.getMedian());*/
 
         System.out.println(strProblems.task1(str));
         System.out.println(strProblems.task2(str2));

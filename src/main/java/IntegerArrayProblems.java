@@ -3,18 +3,11 @@ import java.util.Collections;
 
 public class IntegerArrayProblems {
 
-    private final int[] arr;
 
-    public int[] getArr() {
-        return arr;
-    }
-
-    public IntegerArrayProblems(int[] arr) {
-        this.arr = arr.clone();
-    }
+    public IntegerArrayProblems(){}
 
     // Arrays.sort(arr) uses Dual-Pivot implementation of Quicksort
-    public void bubleSort() {
+    public int[] bubleSort(int[] arr) {
 
         for(int i = 0; i < arr.length; i++) {
             for(int j = 0; j < arr.length-1-i; j++) {
@@ -26,11 +19,13 @@ public class IntegerArrayProblems {
                 }
             }
         }
+
+        return arr;
     }
 
-    public double getMedian() {
+    public double getMedian(int[] arr) {
         double median;
-        bubleSort();
+        bubleSort(arr);
         
         if(arr.length % 2 == 0 ) {
             median = ((double)arr[arr.length/2] + (double)arr[arr.length/2 - 1])/2;
@@ -41,8 +36,10 @@ public class IntegerArrayProblems {
         return median;
     }
 
-    public void getPrimeNumbers() {
+    public int[] getPrimeNumbers(int[] arr) {
         int flag = 0;
+        int[] primeNumbers = {};
+        int j = 0;
 
         for(int el: arr) {
             if(el <= 1){
@@ -57,15 +54,49 @@ public class IntegerArrayProblems {
             }
 
             if(flag == 0) {
-                System.out.println(el);
+                primeNumbers[j] = el;
+                j++;
             } else {
                 flag = 0;
             }
         }
+
+        return primeNumbers;
     }
 
-    public void printArray()
+    public int[] deleteDuplicates(int[] arr) {
+        int[] newArr ={};
+
+        bubleSort(arr);
+        for(int i = 0; i < arr.length; i++){
+            if(i != 0 && arr[i] == arr[i-1]){
+                newArr = removeElement(arr,i);
+            }
+        }
+
+        return newArr;
+    }
+
+    public int[] removeElement(int[] arr, int index)
     {
+        int[] anotherArray = new int[arr.length - 1];
+
+        if (index < 0 || index >= arr.length) {
+            return arr;
+        }
+
+        for (int i = 0, k = 0; i < arr.length; i++) {
+            if (i == index) {
+                continue;
+            }
+            anotherArray[k++] = arr[i];
+        }
+
+        return anotherArray;
+    }
+
+    public void printArray(int[] arr) {
+
         for(int item: arr) {
             System.out.print(item +" ");
         }

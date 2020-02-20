@@ -1,23 +1,12 @@
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 public class IntegerListProblems {
 
-    private final List<Integer> list;
+    public IntegerListProblems() {}
 
-    public IntegerListProblems(List<Integer> list) {
-        this.list = List.copyOf(list);
-    }
-
-    public List<Integer> getList() {
-        return list;
-    }
-
-    public void sort(){
-        Collections.sort(list);
-    }
-
-    public double getMedian(){
+    public double getMedian(List<Integer> list){
         int middle = list.size()/2;
 
         if(list.size() % 2 == 1) {
@@ -27,8 +16,9 @@ public class IntegerListProblems {
         }
     }
 
-    public void getPrimeNumbers() {
+    public List<Integer> getPrimeNumbers(List<Integer> list) {
         int flag = 0;
+        List<Integer> newList = new ArrayList<>();
 
         for(int el: list) {
 
@@ -44,11 +34,13 @@ public class IntegerListProblems {
             }
 
             if(flag == 0) {
-                System.out.println(el);
+                newList.add(el);
             } else {
                 flag = 0;
             }
         }
+
+        return newList;
     }
 
 }
