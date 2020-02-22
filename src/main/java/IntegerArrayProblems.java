@@ -39,7 +39,6 @@ public class IntegerArrayProblems {
     public int[] getPrimeNumbers(int[] arr) {
         int flag = 0;
         int[] primeNumbers = {};
-        int j = 0;
 
         for(int el: arr) {
             if(el <= 1){
@@ -54,14 +53,25 @@ public class IntegerArrayProblems {
             }
 
             if(flag == 0) {
-                primeNumbers[j] = el;
-                j++;
+                primeNumbers = addElement(primeNumbers, el);
             } else {
                 flag = 0;
             }
         }
 
         return primeNumbers;
+    }
+
+    public int[] addElement(int[] arr, int x) {
+        int[] newArr = new int[arr.length +1];
+
+        for(int i = 0; i < arr.length; i++) {
+            newArr[i] = arr[i];
+        }
+
+        newArr[arr.length] = x;
+
+        return newArr;
     }
 
     public int[] deleteDuplicates(int[] arr) {
@@ -77,22 +87,21 @@ public class IntegerArrayProblems {
         return arr;
     }
 
-    public int[] removeElement(int[] arr, int index)
-    {
-        int[] anotherArray = new int[arr.length - 1];
+    public int[] removeElement(int[] arr, int index) {
+        int[] newArr = new int[arr.length - 1];
 
         if (index < 0 || index >= arr.length) {
             return arr;
         }
 
-        for (int i = 0, k = 0; i < arr.length; i++) {
-            if (i == index) {
+        for(int i = 0, k = 0; i < arr.length; i++) {
+            if(i == index) {
                 continue;
             }
-            anotherArray[k++] = arr[i];
+            newArr[k++] = arr[i];
         }
 
-        return anotherArray;
+        return newArr;
     }
 
     public void printArray(int[] arr) {
