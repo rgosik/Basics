@@ -65,16 +65,16 @@ public class IntegerArrayProblems {
     }
 
     public int[] deleteDuplicates(int[] arr) {
-        int[] newArr ={};
 
         bubleSort(arr);
         for(int i = 0; i < arr.length; i++){
             if(i != 0 && arr[i] == arr[i-1]){
-                newArr = removeElement(arr,i);
+                arr = removeElement(arr,i);
+                i--;
             }
         }
 
-        return newArr;
+        return arr;
     }
 
     public int[] removeElement(int[] arr, int index)
