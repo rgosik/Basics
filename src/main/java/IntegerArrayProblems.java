@@ -23,12 +23,12 @@ public class IntegerArrayProblems {
         return arr;
     }
 
-    public double getMedian(int[] arr) {
-        double median;
+    public int getMedian(int[] arr) {
+        int median;
         bubleSort(arr);
         
         if(arr.length % 2 == 0 ) {
-            median = ((double)arr[arr.length/2] + (double)arr[arr.length/2 - 1])/2;
+            median = (arr[arr.length/2] + arr[arr.length/2 - 1])/2;
         } else {
             median = arr[arr.length/2];
         }

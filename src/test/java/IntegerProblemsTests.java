@@ -43,4 +43,13 @@ public class IntegerProblemsTests {
 
         assertArrayEquals(primeArr, new int[] {2,3,5,7,11,13,2741,3253});
     }
+
+    @Test
+    void getMedian(){
+        int[] arr = {1,2,3,4,5,7,11,55,99,123,532};
+
+        int median = arrProb.getMedian(arr);
+
+        assertEquals(7, median);
+    }
 }

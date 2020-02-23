@@ -3,7 +3,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        List<Integer> list = new ArrayList<>();
+/*        List<Integer> list = new ArrayList<>();
         list.add(4);
         list.add(11);
         list.add(9);
@@ -24,20 +24,20 @@ public class Main {
         //IntegerArrayProblems numP2 = new IntegerArrayProblems(arr);
         StringProblems strProblems = new StringProblems();
 
-/*
+*//*
         numP.getPrimeNumbers();
         System.out.println(numP.getMedian());
-*/
+*//*
 
         System.out.println();
 
-/*        numP2.getPrimeNumbers();
+*//*        numP2.getPrimeNumbers();
         numP2.bubleSort();
         numP2.printArray();
-        System.out.println(numP2.getMedian());*/
+        System.out.println(numP2.getMedian());*//*
 
         System.out.println(strProblems.task1(str));
-        System.out.println(strProblems.task2(str2));
+        System.out.println(strProblems.task2(str2));*/
 
     }
 }
